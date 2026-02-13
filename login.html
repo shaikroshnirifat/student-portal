@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Portal Login</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .box{
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            width:300px;
+            text-align:center;
+            box-shadow:0 0 15px rgba(0,0,0,0.2);
+        }
+
+        input{
+            width:90%;
+            padding:10px;
+            margin:10px;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        button{
+            background:#4facfe;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#0077ff;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Student Login</h2>
+
+    <input type="text" id="username" placeholder="Enter Username"><br>
+    <input type="password" id="password" placeholder="Enter Password"><br>
+
+    <button onclick="login()">Login</button>
+
+    <p id="msg"></p>
+</div>
+
+<script>
+function login()
+{
+    var user=document.getElementById("username").value;
+    var pass=document.getElementById("password").value;
+
+    if(user=="admin" && pass=="1234")
+        document.getElementById("msg").innerHTML="Login Successful ✅";
+    else
+        document.getElementById("msg").innerHTML="Invalid Username or Password ❌";
+}
+</script>
+
+</body>
+</html>
